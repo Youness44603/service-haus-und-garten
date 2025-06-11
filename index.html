@@ -10,16 +10,34 @@
       background: #f4f4f4;
       margin: 0;
       padding: 0;
-      text-align: center;
       color: #333;
     }
     header {
-      background: #2d6a4f;
+      background-color: #2d6a4f;
       color: white;
-      padding: 30px 20px;
+      padding: 40px 20px;
+      text-align: center;
     }
     h1 {
       margin: 0;
+      font-size: 2em;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+    h2 {
+      color: #2d6a4f;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      content: "✓";
+      color: #2d6a4f;
+      margin-right: 10px;
     }
     .button-link {
       display: inline-block;
@@ -30,47 +48,80 @@
       text-decoration: none;
       font-size: 18px;
       border-radius: 8px;
+      text-align: center;
     }
     .button-link:hover {
       background-color: #1b4332;
     }
+    .kontakt {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .kontakt a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 2px 2px 3px #999;
+      z-index: 100;
+    }
+    .whatsapp-float i {
+      margin-top: 14px;
+    }
+    .whatsapp-float:hover {
+      background-color: #128C7E;
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Service Haus & Garten</h1>
     <p>Professionelle Garten- und Reinigungsdienste</p>
   </header>
-  <main>
-    <a class="button-link" href="galerie.html">📷 Unsere Arbeiten ansehen</a>
-  </main>
 
-<style>
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
-}
-.whatsapp-float i {
-  margin-top: 14px;
-}
-.whatsapp-float:hover {
-  background-color: #128C7E;
-}
-</style>
+  <section>
+    <h2>Unsere Leistungen</h2>
+    <ul>
+      <li>Hausmeistertätigkeiten</li>
+      <li>Steinreinigung</li>
+      <li>Hofreinigung</li>
+      <li>Laubbeseitigung</li>
+      <li>Winterdienst</li>
+      <li>Gartenpflege</li>
+    </ul>
 
-<a href="https://wa.me/4915901350188" class="whatsapp-float" target="_blank" title="Schreib uns auf WhatsApp">
-  <i>📱</i>
-</a>
+    <h2>Einsatzgebiete</h2>
+    <p>Bochum, Essen, Dortmund, Wattenscheid, Langendreer, Witten, Gelsenkirchen</p>
+
+    <div style="text-align:center;">
+      <a class="button-link" href="galerie.html">📷 Unsere Arbeiten ansehen</a>
+    </div>
+  </section>
+
+  <div class="kontakt">
+    <h2>Kontakt</h2>
+    <p>WhatsApp: <a href="https://wa.me/4915901350188">01590 1350188</a></p>
+    <p>Email: <a href="mailto:Servicehausundgarten1991@gmail.com">Servicehausundgarten1991@gmail.com</a></p>
+  </div>
+
+  <a href="https://wa.me/4915901350188" class="whatsapp-float" target="_blank" title="Schreib uns auf WhatsApp">
+    <i>💬</i>
+  </a>
 
 </body>
 </html>
