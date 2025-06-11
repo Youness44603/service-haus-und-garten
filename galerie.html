@@ -56,61 +56,111 @@
     .back-link:hover {
       background-color: #1b4332;
     }
+
+    /* Lightbox style */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      padding: 20px;
+      background: rgba(0,0,0,0.9);
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80vh;
+      margin: 5% auto;
+      display: block;
+      border-radius: 10px;
+    }
+    .lightbox:target {
+      display: block;
+    }
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+      color: white;
+      font-size: 40px;
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
   <h2>Unsere Arbeiten</h2>
   <div class="gallery">
 <div class="image-pair">
-  <div><img src="service1.jpg" alt="Vorher Steinreinigung"><div class="caption">Steinreinigung – vorher</div></div>
-  <div><img src="service2.jpg" alt="Nachher Steinreinigung"><div class="caption">Steinreinigung – nachher</div></div>
+  <div><a href="#img1"><img src="service1.jpg" alt="Vorher Steinreinigung"></a><div class="caption">Steinreinigung – vorher</div></div>
+  <div><a href="#img2"><img src="service2.jpg" alt="Nachher Steinreinigung"></a><div class="caption">Steinreinigung – nachher</div></div>
 </div>
 <div class="image-pair">
-  <div><img src="service3.jpg" alt="Vorher Gartenpflege"><div class="caption">Gartenpflege – vorher</div></div>
-  <div><img src="service4.jpg" alt="Nachher Gartenpflege"><div class="caption">Gartenpflege – nachher</div></div>
+  <div><a href="#img3"><img src="service3.jpg" alt="Vorher Gartenpflege"></a><div class="caption">Gartenpflege – vorher</div></div>
+  <div><a href="#img4"><img src="service4.jpg" alt="Nachher Gartenpflege"></a><div class="caption">Gartenpflege – nachher</div></div>
 </div>
 <div class="image-pair">
-  <div><img src="service5.jpg" alt="Vorher Heckenschnitt"><div class="caption">Heckenschnitt – vorher</div></div>
+  <div><a href="#img5"><img src="service5.jpg" alt="Vorher Heckenschnitt"></a><div class="caption">Heckenschnitt – vorher</div></div>
   <div><div class="caption">Kein Nachher-Bild vorhanden</div></div>
 </div>
 <div class="image-pair">
-  <div><img src="service6.jpg" alt="Vorher Bodenpflege"><div class="caption">Bodenpflege – vorher</div></div>
-  <div><img src="service7.jpg" alt="Nachher Bodenpflege"><div class="caption">Bodenpflege – nachher</div></div>
+  <div><a href="#img7"><img src="service6.jpg" alt="Vorher Bodenpflege"></a><div class="caption">Bodenpflege – vorher</div></div>
+  <div><a href="#img8"><img src="service7.jpg" alt="Nachher Bodenpflege"></a><div class="caption">Bodenpflege – nachher</div></div>
 </div>
 <div class="image-pair">
-  <div><img src="service8.jpg" alt="Vorher Hofpflege"><div class="caption">Hofpflege – vorher</div></div>
-  <div><img src="service9.jpg" alt="Nachher Hofpflege"><div class="caption">Hofpflege – nachher</div></div>
+  <div><a href="#img9"><img src="service8.jpg" alt="Vorher Hofpflege"></a><div class="caption">Hofpflege – vorher</div></div>
+  <div><a href="#img10"><img src="service9.jpg" alt="Nachher Hofpflege"></a><div class="caption">Hofpflege – nachher</div></div>
 </div>
 
   </div>
   <a class="back-link" href="index.html">⬅ Zurück zur Startseite</a>
 
-<style>
-.whatsapp-float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  font-size: 30px;
-  box-shadow: 2px 2px 3px #999;
-  z-index: 100;
-}
-.whatsapp-float i {
-  margin-top: 14px;
-}
-.whatsapp-float:hover {
-  background-color: #128C7E;
-}
-</style>
+  <div id="img1" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service1.jpg" alt="Zoomed Image 1">
+  </div>
 
-<a href="https://wa.me/4915901350188" class="whatsapp-float" target="_blank" title="Schreib uns auf WhatsApp">
-  <i>📱</i>
-</a>
+  <div id="img2" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service2.jpg" alt="Zoomed Image 2">
+  </div>
+
+  <div id="img3" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service3.jpg" alt="Zoomed Image 3">
+  </div>
+
+  <div id="img4" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service4.jpg" alt="Zoomed Image 4">
+  </div>
+
+  <div id="img5" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service5.jpg" alt="Zoomed Image 5">
+  </div>
+
+  <div id="img7" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service6.jpg" alt="Zoomed Image 7">
+  </div>
+
+  <div id="img8" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service7.jpg" alt="Zoomed Image 8">
+  </div>
+
+  <div id="img9" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service8.jpg" alt="Zoomed Image 9">
+  </div>
+
+  <div id="img10" class="lightbox">
+    <a href="#" class="close">&times;</a>
+    <img src="service9.jpg" alt="Zoomed Image 10">
+  </div>
 
 </body>
 </html>
