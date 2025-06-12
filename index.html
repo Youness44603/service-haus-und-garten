@@ -73,12 +73,63 @@
     .button:hover {
       background-color: #128C7E;
     }
+
+    /* Side menu */
+    .menu-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: white;
+      box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+      padding: 30px 20px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+    }
+    .side-menu.open {
+      right: 0;
+    }
+    .side-menu a {
+      display: block;
+      margin: 15px 0;
+      text-decoration: none;
+      color: #2d6a4f;
+      font-size: 18px;
+    }
+    .side-menu .contact-info {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
   </style>
 </head>
 <body>
 
   <div class="top-banner">
     🌱 Frühjahrsaktion: 10 % auf Winterdienst & Gartenpflege – bis 30.07. mit Code GARTEN2024!
+  </div>
+
+  <div class="menu-btn" onclick="document.querySelector('.side-menu').classList.toggle('open')">☰</div>
+
+  <div class="side-menu">
+    <a href="index.html">🏠 Willkommen</a>
+    <a href="galerie.html">📷 Galerie</a>
+    <a href="mailto:Servicehausundgarten1991@gmail.com">📧 Email schreiben</a>
+    <a href="tel:+4915901350188">📞 01590 1350188</a>
+    <div class="contact-info">
+      <strong>Service Haus & Garten</strong><br>
+      Ruhrgebiet, Deutschland
+    </div>
   </div>
 
   <section class="hero">
