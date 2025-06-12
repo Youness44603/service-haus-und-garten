@@ -15,7 +15,7 @@
       background-color: #4caf50;
       color: white;
       text-align: center;
-      padding: 12px 10px;
+      padding: 10px;
       font-size: 1em;
       font-weight: bold;
     }
@@ -23,27 +23,37 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding: 5px 20px;
       background-color: white;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      height: 70px;
+      height: 65px;
       z-index: 1001;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    header img {
-      height: 50px;
+    .logo-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-title img {
+      height: 45px;
+    }
+    .logo-title span {
+      font-weight: bold;
+      font-size: 16px;
+      color: #2d6a4f;
     }
     .menu-btn {
-      font-size: 30px;
+      font-size: 28px;
       cursor: pointer;
-      color: #2d6a4f;
       background-color: #e6f4ea;
-      padding: 6px 10px;
+      padding: 5px 12px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 6px rgba(0,0,0,0.2);
+      color: #2d6a4f;
     }
     .side-menu {
       position: fixed;
@@ -81,7 +91,7 @@
       text-align: center;
       color: white;
       position: relative;
-      margin-top: 130px;
+      margin-top: 120px;
     }
     .hero::after {
       content: "";
@@ -136,7 +146,10 @@
   </div>
 
   <header>
-    <img src="logo.png" alt="Logo">
+    <div class="logo-title">
+      <img src="logo.png" alt="Logo">
+      <span>Service Haus & Garten</span>
+    </div>
     <div class="menu-btn" onclick="document.querySelector('.side-menu').classList.toggle('open')">☰</div>
   </header>
 
