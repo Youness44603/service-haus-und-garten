@@ -5,6 +5,9 @@
   <title>Service Haus & Garten</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -15,15 +18,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
+      padding: 6px 16px;
       background-color: white;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      height: 70px;
+      height: 60px;
       z-index: 1001;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
     .logo-title {
       display: flex;
@@ -31,49 +34,34 @@
       gap: 10px;
     }
     .logo-title img {
-      height: 45px;
+      height: 40px;
     }
     .logo-title span {
       font-weight: bold;
-      font-size: 16px;
+      font-size: 15px;
       color: #2d6a4f;
     }
     .menu-btn {
-      font-size: 28px;
+      font-size: 24px;
       cursor: pointer;
       background-color: #e6f4ea;
-      padding: 5px 12px;
+      padding: 6px 10px;
       border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.2);
       color: #2d6a4f;
+      box-shadow: 0 0 4px rgba(0,0,0,0.2);
     }
     .top-banner {
       background-color: #4caf50;
       color: white;
       text-align: center;
-      padding: 12px 10px;
-      font-size: 1em;
+      padding: 10px;
+      font-size: 15px;
       font-weight: bold;
       position: fixed;
-      top: 70px;
+      top: 60px;
       left: 0;
       right: 0;
       z-index: 1000;
-    }
-    .side-menu {
-      position: fixed;
-      top: 0;
-      right: -260px;
-      width: 260px;
-      height: 100%;
-      background-color: #ffffff;
-      box-shadow: -3px 0 10px rgba(0,0,0,0.3);
-      padding: 40px 25px;
-      transition: right 0.3s ease-in-out;
-      z-index: 1002;
-    }
-    .side-menu.open {
-      right: 0;
     }
     .menu-overlay {
       display: none;
@@ -83,10 +71,25 @@
       height: 100%;
       width: 100%;
       background-color: rgba(0,0,0,0.4);
-      z-index: 1001;
+      z-index: 1000;
     }
     .menu-overlay.show {
       display: block;
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 260px;
+      height: 100%;
+      background-color: #fff;
+      box-shadow: -3px 0 10px rgba(0,0,0,0.3);
+      padding: 50px 25px;
+      transition: right 0.3s ease-in-out;
+      z-index: 1002;
+    }
+    .side-menu.open {
+      right: 0;
     }
     .side-menu a {
       display: block;
@@ -109,7 +112,7 @@
       text-align: center;
       color: white;
       position: relative;
-      margin-top: 140px;
+      margin-top: 120px;
     }
     .hero::after {
       content: "";
@@ -125,11 +128,11 @@
       max-width: 90%;
     }
     .hero h1 {
-      font-size: 2.5em;
+      font-size: 2.3em;
       margin: 0;
     }
     .hero p {
-      font-size: 1.2em;
+      font-size: 1.1em;
       margin-top: 10px;
     }
     .content {
