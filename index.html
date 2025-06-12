@@ -74,7 +74,7 @@
       background-color: #128C7E;
     }
 
-    /* Side menu */
+    /* Menu button improved */
     .menu-btn {
       position: absolute;
       top: 20px;
@@ -82,18 +82,24 @@
       z-index: 999;
       font-size: 30px;
       cursor: pointer;
-      color: white;
+      color: #2d6a4f;
+      background-color: white;
+      padding: 6px 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
     }
+
+    /* Side menu updated */
     .side-menu {
       position: fixed;
       top: 0;
-      right: -250px;
-      width: 250px;
+      right: -260px;
+      width: 260px;
       height: 100%;
-      background-color: white;
-      box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-      padding: 30px 20px;
-      transition: right 0.3s ease;
+      background-color: #ffffff;
+      box-shadow: -3px 0 10px rgba(0,0,0,0.3);
+      padding: 40px 25px;
+      transition: right 0.3s ease-in-out;
       z-index: 1000;
     }
     .side-menu.open {
@@ -101,7 +107,7 @@
     }
     .side-menu a {
       display: block;
-      margin: 15px 0;
+      margin: 20px 0;
       text-decoration: none;
       color: #2d6a4f;
       font-size: 18px;
