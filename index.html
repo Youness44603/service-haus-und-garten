@@ -6,122 +6,83 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
       color: #333;
     }
-    header {
-      background-color: #2d6a4f;
-      color: white;
-      padding: 40px 20px;
+    .hero {
+      background: url('hero.jpg') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
+      color: white;
+      position: relative;
     }
-    h1 {
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 90%;
+    }
+    .hero h1 {
+      font-size: 2.5em;
       margin: 0;
-      font-size: 2em;
     }
-    section {
-      max-width: 900px;
+    .hero p {
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+    .content {
+      padding: 40px 20px;
+      background-color: #e0f2e9;
+      text-align: center;
+    }
+    .content p {
+      font-size: 1.1em;
+      max-width: 800px;
       margin: auto;
-      padding: 30px 20px;
     }
-    h2 {
-      color: #2d6a4f;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li::before {
-      content: "✓";
-      color: #2d6a4f;
-      margin-right: 10px;
-    }
-    .button-link {
+    .button {
+      margin-top: 30px;
       display: inline-block;
-      margin: 30px auto;
       padding: 15px 25px;
-      background-color: #2d6a4f;
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .button-link:hover {
-      background-color: #1b4332;
-    }
-    .kontakt {
-      background-color: #2d6a4f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .kontakt a {
-      color: #ffffff;
-      text-decoration: none;
-    }
-    /* WhatsApp floating button */
-    .whatsapp-float {
-      position: fixed;
-      width: 60px;
-      height: 60px;
-      bottom: 20px;
-      right: 20px;
       background-color: #25D366;
       color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 30px;
-      box-shadow: 2px 2px 3px #999;
-      z-index: 100;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 6px;
     }
-    .whatsapp-float i {
-      margin-top: 14px;
-    }
-    .whatsapp-float:hover {
+    .button:hover {
       background-color: #128C7E;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Service Haus & Garten</h1>
-    <p>Professionelle Garten- und Reinigungsdienste</p>
-  </header>
-
-  <section>
-    <h2>Unsere Leistungen</h2>
-    <ul>
-      <li>Hausmeistertätigkeiten</li>
-      <li>Steinreinigung</li>
-      <li>Hofreinigung</li>
-      <li>Laubbeseitigung</li>
-      <li>Winterdienst</li>
-      <li>Gartenpflege</li>
-    </ul>
-
-    <h2>Einsatzgebiete</h2>
-    <p>Bochum, Essen, Dortmund, Wattenscheid, Langendreer, Witten, Gelsenkirchen</p>
-
-    <div style="text-align:center;">
-      <a class="button-link" href="galerie.html">📷 Unsere Arbeiten ansehen</a>
+  <section class="hero">
+    <div class="hero-content">
+      <h1>WIR MACHEN IHREN GARTEN SCHÖN!</h1>
+      <p>Ihr zuverlässiger Gartenservice im Ruhrgebiet – Pflege, Reinigung & mehr</p>
     </div>
   </section>
 
-  <div class="kontakt">
-    <h2>Kontakt</h2>
-    <p>WhatsApp: <a href="https://wa.me/4915901350188">01590 1350188</a></p>
-    <p>Email: <a href="mailto:Servicehausundgarten1991@gmail.com">Servicehausundgarten1991@gmail.com</a></p>
-  </div>
-
-  <a href="https://wa.me/4915901350188" class="whatsapp-float" target="_blank" title="Schreib uns auf WhatsApp">
-    <i>💬</i>
-  </a>
+  <section class="content">
+    <p>
+      Als erfahrener Dienstleister in Hausmeister- und Gartenpflege helfen wir Ihnen, Ihre Grünflächen wieder zum Strahlen zu bringen.
+      Von der Gestaltung bis zur Reinigung bieten wir alles aus einer Hand – in Bochum, Essen, Dortmund und Umgebung.
+    </p>
+    <a class="button" href="https://wa.me/4915901350188" target="_blank">JETZT Angebot erhalten</a>
+  </section>
 
 </body>
 </html>
