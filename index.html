@@ -19,6 +19,59 @@
       font-size: 1em;
       font-weight: bold;
     }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: white;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 70px;
+      z-index: 1001;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    header img {
+      height: 50px;
+    }
+    .menu-btn {
+      font-size: 30px;
+      cursor: pointer;
+      color: #2d6a4f;
+      background-color: #e6f4ea;
+      padding: 6px 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .side-menu {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 260px;
+      height: 100%;
+      background-color: #ffffff;
+      box-shadow: -3px 0 10px rgba(0,0,0,0.3);
+      padding: 40px 25px;
+      transition: right 0.3s ease-in-out;
+      z-index: 1000;
+    }
+    .side-menu.open {
+      right: 0;
+    }
+    .side-menu a {
+      display: block;
+      margin: 20px 0;
+      text-decoration: none;
+      color: #2d6a4f;
+      font-size: 18px;
+    }
+    .side-menu .contact-info {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
     .hero {
       background: url('hero.jpg') center/cover no-repeat;
       height: 90vh;
@@ -28,6 +81,7 @@
       text-align: center;
       color: white;
       position: relative;
+      margin-top: 130px;
     }
     .hero::after {
       content: "";
@@ -73,50 +127,6 @@
     .button:hover {
       background-color: #128C7E;
     }
-
-    /* Menu button improved */
-    .menu-btn {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      z-index: 999;
-      font-size: 30px;
-      cursor: pointer;
-      color: #2d6a4f;
-      background-color: white;
-      padding: 6px 10px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-
-    /* Side menu updated */
-    .side-menu {
-      position: fixed;
-      top: 0;
-      right: -260px;
-      width: 260px;
-      height: 100%;
-      background-color: #ffffff;
-      box-shadow: -3px 0 10px rgba(0,0,0,0.3);
-      padding: 40px 25px;
-      transition: right 0.3s ease-in-out;
-      z-index: 1000;
-    }
-    .side-menu.open {
-      right: 0;
-    }
-    .side-menu a {
-      display: block;
-      margin: 20px 0;
-      text-decoration: none;
-      color: #2d6a4f;
-      font-size: 18px;
-    }
-    .side-menu .contact-info {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #555;
-    }
   </style>
 </head>
 <body>
@@ -125,8 +135,10 @@
     🌱 Frühjahrsaktion: 10 % auf Winterdienst & Gartenpflege – bis 30.07. mit Code GARTEN2024!
   </div>
 
-  <img src="logo.png" alt="Logo" style="position:absolute; top:15px; left:15px; height:60px; z-index:1000;">
-  <div class="menu-btn" onclick="document.querySelector('.side-menu').classList.toggle('open')">☰</div>
+  <header>
+    <img src="logo.png" alt="Logo">
+    <div class="menu-btn" onclick="document.querySelector('.side-menu').classList.toggle('open')">☰</div>
+  </header>
 
   <div class="side-menu">
     <a href="index.html">🏠 Willkommen</a>
